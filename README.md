@@ -165,5 +165,7 @@ The processed features are passed to the pre-trained model (Malicious_URL_Predic
 - Integrate additional security tools into the Chrome extension.
 - Allow batch URL analysis via file uploads.
 
+---
+
 ## Output
 ![Screenshot 2025-01-13 000940](https://github.com/user-attachments/assets/ad497638-ae06-42ee-a6f9-5db64eaccd24)
