@@ -36,15 +36,16 @@
                 </div>
             </div>
 
-            <!-- Coming Soon Card -->
-            <div class="bg-white rounded-lg shadow p-4 opacity-75 cursor-not-allowed">
+            <!-- XSS Detection Card -->
+            <div class="bg-white rounded-lg shadow p-4 cursor-pointer hover:shadow-lg transition duration-300"
+                 id="xssDetectionCard">
                 <div class="flex items-center">
-                    <div class="text-gray-500 mr-4">
-                        <i class="fas fa-clock text-2xl"></i>
+                    <div class="text-yellow-500 mr-4">
+                        <i class="fas fa-virus text-2xl"></i>
                     </div>
                     <div>
-                        <h2 class="text-lg font-semibold">Coming Soon</h2>
-                        <p class="text-sm text-gray-600">New security tools coming soon</p>
+                        <h2 class="text-lg font-semibold">XSS Attack Detection</h2>
+                        <p class="text-sm text-gray-600">Detect potential XSS attack patterns in URLs</p>
                     </div>
                 </div>
             </div>
@@ -60,13 +61,19 @@
                            placeholder="https://example.com">
                 </div>
                 <button id="analyzeCurrentButton"
-                class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 mb-2">
-            Analyze Current Page
-        </button>
-        <button id="analyzeUrlButton"
-                class="w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">
-            Analyze Entered URL
-        </button>
+                        class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 mb-2">
+                    Analyze Current Page
+                </button>
+                <button id="analyzeUrlButton"
+                        class="w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">
+                    Analyze Entered URL
+                </button>
+
+                <!-- XSS Detection Button -->
+                <button id="analyzeXSSButton"
+                        class="w-full bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition duration-300 mt-4">
+                    Detect XSS Attack
+                </button>
                 
                 <!-- Results Section -->
                 <div id="results" class="hidden mt-4 p-4 bg-gray-50 rounded-lg">
