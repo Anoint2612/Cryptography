@@ -1,4 +1,7 @@
-Flask
-Flask-CORS
+flask
+flask-cors
 tensorflow
 numpy
+scikit-learn
+nltk
+gensim
