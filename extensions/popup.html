@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,15 +37,16 @@
                 </div>
             </div>
 
-            <!-- Coming Soon Card -->
-            <div class="bg-white rounded-lg shadow p-4 opacity-75 cursor-not-allowed">
+            <!-- XSS Detection Card -->
+            <div class="bg-white rounded-lg shadow p-4 cursor-pointer hover:shadow-lg transition duration-300"
+                 id="xssDetectionCard">
                 <div class="flex items-center">
-                    <div class="text-gray-500 mr-4">
-                        <i class="fas fa-clock text-2xl"></i>
+                    <div class="text-red-500 mr-4">
+                        <i class="fas fa-bug text-2xl"></i>
                     </div>
                     <div>
-                        <h2 class="text-lg font-semibold">Coming Soon</h2>
-                        <p class="text-sm text-gray-600">New security tools coming soon</p>
+                        <h2 class="text-lg font-semibold">XSS Detection</h2>
+                        <p class="text-sm text-gray-600">Analyze inputs for XSS vulnerabilities</p>
                     </div>
                 </div>
             </div>
@@ -60,22 +62,42 @@
                            placeholder="https://example.com">
                 </div>
                 <button id="analyzeCurrentButton"
-                class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 mb-2">
-            Analyze Current Page
-        </button>
-        <button id="analyzeUrlButton"
-                class="w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">
-            Analyze Entered URL
-        </button>
+                        class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 mb-2">
+                    Analyze Current Page
+                </button>
+                <button id="analyzeUrlButton"
+                        class="w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">
+                    Analyze Entered URL
+                </button>
                 
                 <!-- Results Section -->
                 <div id="results" class="hidden mt-4 p-4 bg-gray-50 rounded-lg">
                     <div id="resultContent"></div>
                 </div>
-
                 <!-- Loading Spinner -->
                 <div id="loading" class="hidden mt-4 text-center">
                     <div class="inline-block animate-spin rounded-full h-6 w-6 border-4 border-blue-500 border-t-transparent"></div>
+                </div>
+            </div>
+        </div>
+        <div id="xssDetection" class="hidden">
+            <div class="bg-white rounded-lg shadow p-4">
+                <div class="mb-4">
+                    <label for="xssInput" class="block text-sm font-medium text-gray-700 mb-2">Enter text to analyze for XSS:</label>
+                    <textarea id="xssInput" 
+                              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                              placeholder="Enter text to check for XSS vulnerabilities"
+                              rows="4"></textarea>
+                </div>
+                <button id="analyzeXssButton"
+                        class="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300">
+                    Analyze for XSS
+                </button>
+                <div id="xssResults" class="hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                    <div id="xssResultContent"></div>
+                </div>
+                <div id="xssLoading" class="hidden mt-4 text-center">
+                    <div class="inline-block animate-spin rounded-full h-6 w-6 border-4 border-red-500 border-t-transparent"></div>
                 </div>
             </div>
         </div>
